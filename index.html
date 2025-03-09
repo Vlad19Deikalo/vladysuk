@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вау! Сайти, що зачаровують ✨</title>
+    <style>
+        body { font-family: 'Comic Sans MS', cursive, sans-serif; text-align: center; background: linear-gradient(90deg, #ff9a9e, #fad0c4); color: #333; }
+        header { background: #ffcc00; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        header a { color: #ff4081; text-decoration: none; font-size: 24px; font-weight: bold; }
+        .container { width: 80%; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 20px; box-shadow: 0px 0px 15px rgba(0,0,0,0.2); }
+        .image-section { text-align: center; margin-bottom: 30px; }
+        .image-section img { width: 85%; border-radius: 20px; border: 5px solid #ffcc00; }
+        .title { font-size: 32px; font-weight: bold; color: #ff4081; }
+        .highlight { background: #ffeb3b; padding: 5px 10px; border-radius: 10px; }
+        .services { font-size: 22px; margin: 20px 0; }
+        .services ul { text-align: left; display: inline-block; }
+        .fake-comments { text-align: left; margin-top: 30px; padding: 20px; background: #ffeb3b; border-radius: 15px; }
+        .register { background: #90ee90; padding: 25px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+        .register input, .register textarea { display: block; margin: 10px auto; padding: 12px; width: 90%; border: 2px solid #ff4081; border-radius: 10px; font-size: 18px; }
+        .register button { background: #ff4081; color: white; padding: 15px 30px; border: none; border-radius: 15px; font-size: 20px; cursor: pointer; transition: 0.3s; }
+        .register button:hover { background: #ff1744; }
+        footer { margin-top: 30px; background: #ff4081; color: white; padding: 15px; border-radius: 15px; }
+    </style>
+    <script>
+        function sendToTelegram() {
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+            let email = document.getElementById('email').value;
+            let messenger = document.getElementById('messenger').value;
+            let siteType = document.getElementById('siteType').value;
+            let details = document.getElementById('details').value;
+            
+            let message = `🔥 Нова заявка на сайт! 🔥\n👤 Ім'я: ${name}\n📞 Телефон: ${phone}\n✉️ Email: ${email}\n💬 Messenger: ${messenger}\n🌍 Тип сайту: ${siteType}\n📝 Деталі: ${details}`;
+            
+            let telegramBotToken = '7625692479:AAGPTjZKZSDtqdXs3gQ8UBk4s7qHfb7L9s8';
+            let chatId = '-1002477055105';
+            let url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => alert('✅ Заявка надіслана!'))
+                .catch(error => alert('❌ Помилка надсилання!'));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="https://tiktok.com" target="_blank">📱 Глянь мої роботи на TikTok!</a>
+    </header>
+    
+    <div class="container">
+        <h2 class="title">💥 Тобі потрібен сайт, що вразить усіх? Ласкаво просимо! 🚀</h2>
+        <p class="services">Я створюю унікальні <span class="highlight">сайти-сюрпризи</span>, інтернет-магазини, блоги та лендінги!</p>
+        <ul>
+            <li>✨ Магазини будь-якої тематики (навіть 18+ 😏)</li>
+            <li>💖 Сайти-зізнання – розтопіть серце коханої людини!</li>
+            <li>🎁 Індивідуальні проекти під будь-яку шалену ідею!</li>
+            <li>📢 Лендінги, що продають без зайвих слів!</li>
+        </ul>
+        
+        <div class="register">
+            <h3>🔥 Не зволікай! Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
+            <input id="name" type="text" placeholder="Ім'я 🌟">
+            <input id="phone" type="tel" placeholder="Номер телефону 📞">
+            <input id="email" type="email" placeholder="Email ✉️">
+            <input id="messenger" type="text" placeholder="Telegram, Viber або WhatsApp 💬">
+            <input id="siteType" type="text" placeholder="Який сайт тобі потрібен? 🌍">
+            <textarea id="details" placeholder="Коротко опиши свої побажання 🎨" rows="4"></textarea>
+            <button onclick="sendToTelegram()">🚀 Надіслати</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>📜 Політика конфіденційності: Ми нікому не передаємо твої дані. А ще, ти дуже крут(а), раз дочитав(ла) аж сюди! 🏆</p>
+        <p>😉 Хочеш сайт? Тисни кнопку вище! 🎉</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет-магазин одягу</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Інтернет-магазин одягу</h1>
+            <nav>
+                <ul>
+                    <li><a href="#categories">Категорії</a></li>
+                    <li><a href="#promotions">Акції</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#cart">Кошик</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="categories">
+            <h2>Категорії</h2>
+            <ul>
+                <li>Чоловічий одяг</li>
+                <li>Жіночий одяг</li>
+                <li>Дитячий одяг</li>
+                <li>Аксесуари</li>
+            </ul>
+        </section>
+        <section id="promotions">
+            <h2>Акції</h2>
+            <ul>
+                <li>Знижки</li>
+                <li>Сезонні розпродажі</li>
+                <li>Новинки</li>
+            </ul>
+        </section>
+        <section id="catalog">
+            <h2>Каталог товарів</h2>
+            <div class="filter">
+                <label for="category">Категорія:</label>
+                <select id="category">
+                    <option>Чоловічий одяг</option>
+                    <option>Жіночий одяг</option>
+                    <option>Дитячий одяг</option>
+                    <option>Аксесуари</option>
+                </select>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <img src="product1.jpg" alt="Product 1">
+                    <p>Товар 1</p>
+                    <p>Ціна: 100 грн</p>
+                </div>
+                <div class="product">
+                    <img src="product2.jpg" alt="Product 2">
+                    <p>Товар 2</p>
+                    <p>Ціна: 200 грн</p>
+                </div>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Кошик</h2>
+            <p>Ваш кошик порожній.</p>
+        </section>
+        <section id="checkout">
+            <h2>Оформлення замовлення</h2>
+            <form>
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name">
+                <label for="address">Адреса:</label>
+                <input type="text" id="address">
+                <label for="delivery">Спосіб доставки:</label>
+                <select id="delivery">
+                    <option>Нова пошта</option>
+                    <option>Укрпошта</option>
+                </select>
+                <label for="payment">Спосіб оплати:</label>
+                <select id="payment">
+                    <option>Картка</option>
+                    <option>Готівка</option>
+                </select>
+                <button type="submit">Підтвердити замовлення</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Інтернет-магазин одягу</p>
+        </div>
+    </footer>
+</body>
+</html>
