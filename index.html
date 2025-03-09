@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechLAdvicta - Вау! Сайти, що зачаровують ✨</title>
     <style>
-        /* Основні стилі */
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
@@ -19,241 +18,91 @@
             background: #000;
             padding: 60px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-            position: relative;
             animation: fadeIn 2s ease-out, slideInFromTop 1s ease-out;
         }
         header img {
-            width: 160px;
-            height: 160px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 5px solid #ffcc00;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
+            border: 4px solid #ffcc00;
+            animation: pulse 1.5s infinite;
         }
-        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
         header a {
             color: #ffcc00;
             text-decoration: none;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            margin-top: 250px;
-            margin-bottom: 15px;
-            display: inline-block;
-            transition: 0.3s;
-            animation: fadeIn 2s ease-out;
+            display: block;
+            margin-top: 20px;
         }
-        header a:hover {
-            color: #ffb300;
-            text-decoration: underline;
-        }
-
-        /* Анімації */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% {
-                transform: translate(-50%, -50%) scale(1.1);
-            }
-        }
-        @keyframes slideInFromLeft {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideInFromTop {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes zoomIn {
-            from {
-                transform: scale(0);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        @keyframes glowText {
-            0% {
-                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
-            }
-            100% {
-                text-shadow: 0 0 15px #ffb300, 0 0 30px #ffb300, 0 0 45px #ffb300;
-            }
-        }
-
-        /* Контейнер */
         .container {
-            width: 85%;
+            width: 90%;
+            max-width: 800px;
             margin: 40px auto;
             background: #1e1e1e;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
-            animation: fadeIn 2s ease-out, slideInFromBottom 1s ease-out;
         }
         .title {
-            font-size: 32px;
-            font-weight: bold;
+            font-size: 28px;
             color: #ffcc00;
-            margin-bottom: 20px;
-            animation: slideInFromLeft 1s ease-out;
         }
-        .highlight {
-            background: #ffcc00;
-            padding: 5px 15px;
-            border-radius: 10px;
-            color: #121212;
-            font-weight: bold;
-        }
-        .services ul {
-            text-align: left;
-            list-style-type: none;
-            padding-left: 0;
-            font-size: 20px;
-        }
-        .services li {
-            margin: 10px 0;
-            font-weight: 600;
-            transition: 0.3s;
-            animation: fadeIn 2s ease-out;
-        }
-        .services li:hover {
-            color: #ffcc00;
-            cursor: pointer;
-        }
-
-        /* Форма */
         .register {
             background: #333;
-            padding: 35px;
+            padding: 25px;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            margin-top: 40px;
-            animation: fadeIn 2s ease-out;
-            
         }
         .register input, .register textarea {
-            display: block;
-            margin: 15px auto;
-            padding: 14px;
-            width: 80%;
+            width: calc(100% - 30px);
+            padding: 12px;
             border: 2px solid #ffcc00;
-            border-radius: 12px;
+            border-radius: 10px;
             background: #222;
             color: #fff;
-            font-size: 18px;
-            transition: 0.3s;
-            animation: slideInFromLeft 1.5s ease-out;
-        }
-        .register input:focus, .register textarea:focus {
-            border-color: #ffb300;
-            background: #333;
+            font-size: 16px;
+            margin-top: 10px;
         }
         .register button {
+            width: 50%;
             background: #ffcc00;
             color: white;
-            padding: 18px 36px;
-            border: none;
-            border-radius: 12px;
-            font-size: 22px;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 20px;
             cursor: pointer;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            animation: bounce 2s infinite;
-            background: #ffcc00;
-            color: white;
-            padding: 18px 36px;
-            border: none;
-            border-radius: 12px;
-            font-size: 22px;
-            cursor: pointer;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            animation: bounce 2s infinite;
-            display: block;
-            margin: 0 auto; /* Центрування кнопки */
+            animation: pulse 1.5s infinite;
         }
-        .register button:hover {
-            background: #ffb300;
-            text-align: center;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-            background: #ffcc00;
-                color: white;
-                padding: 18px 36px;
-                border: none;
-                border-radius: 12px;
-                font-size: 22px;
-                cursor: pointer;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-                animation: bounce 2s infinite;
-                display: block;
-                margin: 0 auto; /* Центрування кнопки */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
-
-        /* Футер */
         footer {
-            margin-top: 50px;
+            margin-top: 40px;
             background: #000;
             color: #ffcc00;
             padding: 20px;
             border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
-        footer p {
-            font-size: 18px;
-            animation: fadeIn 2s ease-out;
-        }
-
-        /* Медіа-ресурси */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-            header h1 {
-                font-size: 36px;
-            }
-            .title {
-                font-size: 28px;
-            }
-            .register input, .register textarea {
-                width: 95%;
-            }
-            .register button {
-                width: 90%;
-                text-align: center;
-            }
-            
-        }
-
     </style>
 </head>
 <body>
@@ -264,31 +113,19 @@
     
     <div class="container">
         <h2 class="title">💥 Тобі потрібен сайт, що вразить усіх? Ласкаво просимо в TechLAdvicta! 🚀</h2>
-        <p class="services">Ми компанія, яка створює унікальні <span class="highlight">сайти-сюрпризи</span>, інтернет-магазини, блоги та лендінги, що перевершують усі очікування!</p>
-        <ul>
-            <li>✨ Магазини будь-якої тематики (навіть 18+ 😏)</li>
-            <li>💖 Сайти-зізнання – розтопіть серце коханої людини!</li>
-            <li>🎁 Індивідуальні проекти під будь-яку шалену ідею!</li>
-            <li>📢 Лендінги, що продають без зайвих слів!</li>
-        </ul>
-        
         <div class="register">
-            <div class="tech">
-                <h1>TechLadvicta</h1>
-            </div>
-            <h3>🔥 Не зволікай! Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
-            <input id="name" type="text" placeholder="Ім'я 🌟">
-            <input id="phone" type="tel" placeholder="Номер телефону 📞">
-            <input id="email" type="email" placeholder="Email ✉️">
-            <input id="messenger" type="text" placeholder="Telegram, Viber або WhatsApp 💬">
-            <input id="siteType" type="text" placeholder="Який сайт тобі потрібен? 🌍">
-            <textarea id="details" placeholder="Коротко опиши свої побажання 🎨" rows="4"></textarea>
+            <h3>🔥 Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
+            <input type="text" placeholder="Ім'я 🌟">
+            <input type="tel" placeholder="Номер телефону 📞">
+            <input type="email" placeholder="Email ✉️">
+            <input type="text" placeholder="Messenger 💬">
+            <textarea placeholder="Опиши побажання 🎨"></textarea>
             <button>🔥 Створити мрії! 🔥</button>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 TechLAdvicta | Створено з любов’ю для вас ✨</p>
+        <p>© 2025 TechLAdvicta | Створено з любов’ю ✨</p>
     </footer>
 </body>
 </html>

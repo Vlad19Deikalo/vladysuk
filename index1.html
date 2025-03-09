@@ -3,94 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Інтернет-магазин одягу</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Інтернет-магазин одягу</h1>
-            <nav>
-                <ul>
-                    <li><a href="#categories">Категорії</a></li>
-                    <li><a href="#promotions">Акції</a></li>
-                    <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#cart">Кошик</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="container">
-        <section id="categories">
-            <h2>Категорії</h2>
-            <ul>
-                <li>Чоловічий одяг</li>
-                <li>Жіночий одяг</li>
-                <li>Дитячий одяг</li>
-                <li>Аксесуари</li>
-            </ul>
-        </section>
-        <section id="promotions">
-            <h2>Акції</h2>
-            <ul>
-                <li>Знижки</li>
-                <li>Сезонні розпродажі</li>
-                <li>Новинки</li>
-            </ul>
-        </section>
-        <section id="catalog">
-            <h2>Каталог товарів</h2>
-            <div class="filter">
-                <label for="category">Категорія:</label>
-                <select id="category">
-                    <option>Чоловічий одяг</option>
-                    <option>Жіночий одяг</option>
-                    <option>Дитячий одяг</option>
-                    <option>Аксесуари</option>
-                </select>
-            </div>
-            <div class="products">
-                <div class="product">
-                    <img src="product1.jpg" alt="Product 1">
-                    <p>Товар 1</p>
-                    <p>Ціна: 100 грн</p>
-                </div>
-                <div class="product">
-                    <img src="product2.jpg" alt="Product 2">
-                    <p>Товар 2</p>
-                    <p>Ціна: 200 грн</p>
-                </div>
-            </div>
-        </section>
-        <section id="cart">
-            <h2>Кошик</h2>
-            <p>Ваш кошик порожній.</p>
-        </section>
-        <section id="checkout">
-            <h2>Оформлення замовлення</h2>
-            <form>
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name">
-                <label for="address">Адреса:</label>
-                <input type="text" id="address">
-                <label for="delivery">Спосіб доставки:</label>
-                <select id="delivery">
-                    <option>Нова пошта</option>
-                    <option>Укрпошта</option>
-                </select>
-                <label for="payment">Спосіб оплати:</label>
-                <select id="payment">
-                    <option>Картка</option>
-                    <option>Готівка</option>
-                </select>
-                <button type="submit">Підтвердити замовлення</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Інтернет-магазин одягу</p>
-        </div>
-    </footer>
-</body>
-</html>
+    <title>TechLAdvicta - Вау! Сайти, що зачаровують ✨</title>
+    <style>
+        /* Основні стилі */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: #000;
+            padding: 60px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            position: relative;
+            animation: fadeIn 2s ease-out, slideInFromTop 1s ease-out;
+        }
+        header img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid #ffcc00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        header a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 250px;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: 0.3s;
+            animation: fadeIn 2s ease-out;
+        }
+        header a:hover {
+            color: #ffb300;
+            text-decoration: underline;
+        }
+
+        /* Анімації */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes glowText {
+            0% {
+                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+            }
+            100% {
+                text-shadow: 0 0 15px #ffb300, 0 0 30px #ffb300, 0 0 45px #ffb300;
+            }
+        }
+
+        /* Контейнер */
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
+            animation: fadeIn 2s ease-out, slideInFromBottom 1s ease-out;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-out;
+        }
+        .highlight {
+            background: #ffcc00;
+            padding: 5px 15px;
+            border-radius: 10px;
+            color: #121212;
+            font-weight: bold;
+        }
+        .services ul {
+            text-align: left;
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 20px;
+        }
+        .services li {
+            margin: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+            animation: fadeIn 2s ease-out;
+        }
+        .services li:hover {
+            color: #ffcc00;
+            cursor: pointer;
+        }
+
+        /* Форма */
+        .register {
+            background: #333;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            margin-top: 40px;
+            animation: fadeIn 2s ease-out;
+        }
+        .register input, .register textarea {
+            display: block;
+            margin: 15px auto;
+            padding: 14px;
+            width: 80%;
+            border: 2px solid #ffcc00;
+            border-radius: 12px;
+            background: #222;
+            color: #fff;
+            font-size: 18px;
+            transition: 0.3s;
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+        .register input:focus, .register textarea:focus {
+            border-color: #ffb300;
+            background: #333;
+        }
+        .register button {
+            background: #ffcc00;
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 12px;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            animation: bounce 2s infinite;
+        }
+        .register button:hover {
+            background: #ffb300;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+
+        /* Футер */
+        footer {
+            margin-top: 50px;
+            background: #000;
+            color: #ffcc00;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        footer p {
+            font-size: 18px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Медіа-ресурси */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+            header a {
+                margin-top: 160px;
+                font-size: 18px;
+            }
+            .title {
+                font-size: 28px;
+            }
+            .services ul {
+                font-size: 18px;
+            }
+            .register input, .register textarea {
+                width: 95%;
+            }
+            .register button {
+                width: 95%;
+            }
+            .tech {
+                padding: 40px 0;
+            }
+            .tech h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+
