@@ -13,119 +13,152 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            word-wrap: break-word;
         }
+
+
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: #000;
-            padding: 60px 0;
+            padding: 40px 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-            animation: fadeIn 2s ease-out, slideInFromTop 1s ease-out;
         }
         header img {
-            width: 120px;
-            height: 120px;
+            width: 150px; /* Збільшено розмір логотипа */
+            height: 150px; /* Збільшено розмір логотипа */
             border-radius: 50%;
-            border: 4px solid #ffcc00;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
+            border: 3px solid #ffcc00;
+            margin-left: 350px;
         }
         header a {
             color: #ffcc00;
             text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            display: block;
-            margin-top: 20px;
+            font-size: 18px;
+            margin-left: auto; /* Відштовхуємо елемент від лівої частини */
+            margin-right: 350px;
         }
         .container {
             width: 90%;
-            max-width: 800px;
-            margin: 40px auto;
+            max-width: 600px;
+            margin: 20px auto;
             background: #1e1e1e;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
         }
         .title {
-            font-size: 28px;
+            font-size: 24px;
             color: #ffcc00;
         }
-        .register {
-            background: #333;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
         .register input, .register textarea {
-            width: calc(100% - 30px);
-            padding: 12px;
+            width: calc(100% - 20px);
+            padding: 10px;
             border: 2px solid #ffcc00;
-            border-radius: 10px;
+            border-radius: 8px;
             background: #222;
             color: #fff;
             font-size: 16px;
             margin-top: 10px;
         }
         .register button {
-            width: 50%;
+            width: 100%;
             background: #ffcc00;
             color: white;
-            padding: 16px;
-            border-radius: 10px;
-            font-size: 20px;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 18px;
             cursor: pointer;
-            animation: pulse 1.5s infinite;
         }
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
+        @media (max-width: 480px) {
+            header img {
+                width: 120px;
+                height: 120px;
             }
-            50% {
-                transform: scale(1.1);
+            .title {
+                font-size: 20px;
             }
-            100% {
-                transform: scale(1);
+            .register input, .register textarea {
+                font-size: 14px;
             }
-        }
-        footer {
-            margin-top: 40px;
-            background: #000;
-            color: #ffcc00;
-            padding: 20px;
-            border-radius: 20px;
+            .register button {
+                font-size: 16px;
+                padding: 12px;
+            }
         }
     </style>
-</head>
-<body>
-    <header>
-        <img src="image.png" alt="TechLAdvicta Logo">
-        <a href="https://tiktok.com" target="_blank">📱 Глянь мої роботи на TikTok!</a>
-    </header>
+    </head>
+    <body>
+        <header>
+            <img src="image.png" alt="TechLAdvicta Logo">
+            <a href="https://tiktok.com" target="_blank">📱 Глянь мої роботи на TikTok!</a>
+        </header>
+    </body>
     
+    
+
     <div class="container">
-        <h2 class="title">💥 Тобі потрібен сайт, що вразить усіх? Ласкаво просимо в TechLAdvicta! 🚀</h2>
+        <h2 class="title">✨ Магазини будь-якої тематики ✨</h2>
+        <p class="services">Від одягу до технологій, ми забезпечимо ефективні рішення для вашого бізнесу (навіть 18+ 😏).</p>
         <div class="register">
-            <h3>🔥 Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
-            <input type="text" placeholder="Ім'я 🌟">
-            <input type="tel" placeholder="Номер телефону 📞">
-            <input type="email" placeholder="Email ✉️">
-            <input type="text" placeholder="Messenger 💬">
-            <textarea placeholder="Опиши побажання 🎨"></textarea>
+            <h3 class="important">🔥 Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
+            <input id="name" type="text" placeholder="Ім'я 🌟">
+            <input id="phone" type="tel" placeholder="Номер телефону 📞">
+            <input id="email" type="email" placeholder="Email ✉️">
+            <input id="messenger" type="text" placeholder="Telegram, Viber або WhatsApp 💬">
+            <input id="siteType" type="text" placeholder="Який сайт тобі потрібен? 🌍">
+            <textarea id="details" placeholder="Коротко опиши свої побажання 🎨" rows="4"></textarea>
             <button>🔥 Створити мрії! 🔥</button>
         </div>
     </div>
 
-    <footer>
-        <p>© 2025 TechLAdvicta | Створено з любов’ю ✨</p>
-    </footer>
+    <div class="container">
+        <h2 class="title">💖 Сайти-зізнання 💖</h2>
+        <p class="services">Створіть романтичний сайт для вашої коханої людини, щоб зробити пропозицію, святкувати ювілей або просто сказати "Я тебе люблю".</p>
+        <div class="register">
+            <h3 class="important">🔥 Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
+            <input id="name" type="text" placeholder="Ім'я 🌟">
+            <input id="phone" type="tel" placeholder="Номер телефону 📞">
+            <input id="email" type="email" placeholder="Email ✉️">
+            <input id="messenger" type="text" placeholder="Telegram, Viber або WhatsApp 💬">
+            <input id="siteType" type="text" placeholder="Який сайт тобі потрібен? 🌍">
+            <textarea id="details" placeholder="Коротко опиши свої побажання 🎨" rows="4"></textarea>
+            <button>🔥 Створити мрії! 🔥</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="title">🎁 Індивідуальні проекти 🎁</h2>
+        <p class="services">Реалізуйте свої найшаленіші ідеї разом з нами! Ми можемо створити що завгодно, від інтерактивних ігор до новаторських додатків.</p>
+        <div class="register">
+            <h3 class="important">🔥 Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
+            <input id="name" type="text" placeholder="Ім'я 🌟">
+            <input id="phone" type="tel" placeholder="Номер телефону 📞">
+            <input id="email" type="email" placeholder="Email ✉️">
+            <input id="messenger" type="text" placeholder="Telegram, Viber або WhatsApp 💬">
+            <input id="siteType" type="text" placeholder="Який сайт тобі потрібен? 🌍">
+            <textarea id="details" placeholder="Коротко опиши свої побажання 🎨" rows="4"></textarea>
+            <button>🔥 Створити мрії! 🔥</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="title">📢 Лендінги 📢</h2>
+        <p class="services">Приверніть увагу та збільшіть продажі за допомогою професійно створених лендінгів, які говорять за вас без зайвих слів.</p>
+        <div class="register">
+            <h3 class="important">🔥 Заповни форму, і я зв’яжуся з тобою! 🔥</h3>
+            <input id="name" type="text" placeholder="Ім'я 🌟">
+            <input id="phone" type="tel" placeholder="Номер телефону 📞">
+            <input id="email" type="email" placeholder="Email ✉️">
+            <input id="messenger" type="text" placeholder="Telegram, Viber або WhatsApp 💬">
+            <input id="siteType" type="text" placeholder="Який сайт тобі потрібен? 🌍">
+            <textarea id="details" placeholder="Коротко опиши свої побажання 🎨" rows="4"></textarea>
+            <button>🔥 Створити мрії! 🔥</button>
+        </div>
+
+        <footer> <p>© 2025 TechLAdvicta | Створено з любов’ю для вас ✨</p> </footer>
+    </div>
 </body>
 </html>
+
